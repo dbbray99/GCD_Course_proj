@@ -36,21 +36,33 @@ run_analysis <- function(){
         activity <- rbind(actTestData, actTrainData)
         results <- rbind(testData, trainData)
 # 3. Uses descriptive activity names to name the activities in the data set
-# Call to inner_join, effectively using actlabel as lookup and applying to activity list 
+        # Call to inner_join, effectively using actlabel as lookup and applying to activity list 
         namedAct <- inner_join(activity, actlabel, by="V1")
-#       Clean and add column hearders
+        #       Clean and add column hearders
 # 4. Appropriately labels the data set with descriptive variable names. 
         featureNames <- make.unique(make.names(as.character(features$V2)))
+        featureNames <- gsub("tBody", "time_", featureNames, fixed=TRUE)
+        featureNames <- gsub("tGravity", "time_Gravity", featureNames, fixed=TRUE)
+        featureNames <- gsub("fBody", "freq_", featureNames, fixed=TRUE)
+        featureNames <- gsub("freq_Body", "freq_", featureNames, fixed=TRUE)
+        featureNames <- gsub("...", "_", featureNames, fixed=TRUE)
+        featureNames <- gsub("..", "", featureNames, fixed=TRUE)
         colnames(results) <- featureNames
-        mergeData <- cbind(namedAct$V2, subject, results)
-        colnames(mergeData)[1] <- "activity"
-        colnames(mergeData)[2] <- "subject"
+        combined_data <- cbind(namedAct$V2, subject, results)
+        colnames(combined_data)[1] <- "activity"
+        colnames(combined_data)[2] <- "subject"
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement.
-        measurementData <- tbl_df(mergeData)
-        measurementData %>% 
+        all_data_frame <- tbl_df(combined_data)
+        subset_data_frame <- all_data_frame %>% 
                 select(activity, subject, contains("mean", ignore.case=FALSE), contains("std", ignore.case=FALSE), -contains("meanFreq"))
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-        tidyTbl <- measurementData %>% 
-        group_by(activity, subject) %>%
-        summarise_each(funs(mean), 3:563)
+        feature_averages_table <- subset_data_frame %>% 
+                group_by(activity, subject) %>%
+                summarise_each(funs(mean), 3:ncol(subset_data_frame)) 
+        write.table(feature_averages_table, "feature_averages.txt", sep=" " ,row.name=FALSE, eol="\r\n")
 }
+
+
+
+
+

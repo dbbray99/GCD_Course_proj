@@ -43,4 +43,39 @@ The final step sees the data summarized by the average (mean) for each of the su
 
 ## Modified Column Names
 
-
+time_AccJerk.mean_Z
+time_AccJerk.std_X
+time_AccJerk.std_Y
+time_AccJerk.std_Z
+time_AccMag.mean
+time_AccMag.std
+time_Acc.mean_X
+time_Acc.mean_Y
+time_Acc.mean_Z
+time_Acc.std_X
+time_Acc.std_Z
+time_Acc.std_Y
+time_GyroJerkMag.mean
+time_GyroJerkMag.std
+time_GyroJerk.mean_X
+time_GyroJerk.mean_Y
+time_GyroJerk.mean_Z
+time_GyroJerk.std_X
+time_GyroJerk.std_Y
+time_GyroJerk.std_Z
+time_GyroMag.mean
+time_GyroMag.std
+time_Gyro.mean_X
+time_Gyro.mean_Y
+time_Gyro.mean_Z
+time_Gyro.std_X
+time_Gyro.std_Y
+time_Gyro.std_Z
+time_GravityAccMag.mean
+time_GravityAccMag.std
+time_GravityAcc.mean_X
+time_GravityAcc.mean_Y
+time_GravityAcc.mean_Z
+time_GravityAcc.std_Z
+time_GravityAcc.std_Y
+time_GravityAcc.std_X

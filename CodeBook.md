@@ -32,10 +32,10 @@ To create variable names that were somewhat more descriptive the following chang
 
  - 'featureNames' - used to hold the modified variable feature names derived by the following and applied to the 'results' data frame to replace the original column variable names;  
 
- - The word "body" was redundant and in fact repeated multiple times in many cases so should be removed to shorten the variable name.
- - The letter "t" used at the beginning of many variable names should be replaced with the word "time" to improve understanding.
- - The letter "f" used at the beginning of many variable names should be replaced with the word "frequency" (abbreviated to "freq") to improve understanding.
- - Insert underscore (?_?) to improve readability
+ - The word "body" was redundant and in fact repeated multiple times in many cases so should be removed to shorten the variable name.  
+ - The letter "t" used at the beginning of many variable names should be replaced with the word "time" to improve understanding.  
+ - The letter "f" used at the beginning of many variable names should be replaced with the word "frequency" (abbreviated to "freq") to improve understanding.  
+ - Insert underscore (?_?) to improve readability  
  - Remove dots (...) to reduce variable length and improve understanding  
 
 ### Final Tidy Data Output

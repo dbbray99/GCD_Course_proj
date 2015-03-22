@@ -24,7 +24,7 @@ The documents provided with the original data set should be used to describe the
  - results - stores the combined test results
  - namedAct - uses "activity" and "actlabel", creates activity name to activity number mapping
 
-### Methodology used for the creation of ?appropriate? data set variable names 
+### Methodology used for the creation of appropriate data set variable names 
 
 To create variable names that were somewhat more descriptive the following changes and assumptions were made. 
 featureNames - used to hold the modified variable feature names derived by the following and applied to the ?results? data frame to replace the original column variable names;
@@ -36,8 +36,9 @@ featureNames - used to hold the modified variable feature names derived by the f
 
 ### Final Tidy Data Output
 A data subset is created for columns related to mean and standard deviation. This reduces to the number of columns from the original 561 down to 66, two additional columns for activity and subject are created making a final data set with 68 columns.
+
 The final step sees the data summarized by the average (mean) for each of the subset columns by "activity" and "subject". This creates an output file where each row represents an activity (6) for each subject (30) across the selected "feature" columns (mean and std).
-feature_averages.txt ? final output file
+ - feature_averages.txt - final output file
 
 ## Modified Column Names
 

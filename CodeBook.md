@@ -26,7 +26,8 @@ The documents provided with the original data set should be used to describe the
 
 ### Methodology used for the creation of appropriate data set variable names 
 
-To create variable names that were somewhat more descriptive the following changes and assumptions were made. 
+To create variable names that were somewhat more descriptive the following changes and assumptions were made. Table 1 below has the final listing.
+
  - 'featureNames' - used to hold the modified variable feature names derived by the following and applied to the 'results' data frame to replace the original column variable names;  
 
  - The word "body" was redundant and in fact repeated multiple times in many cases so should be removed to shorten the variable name.
@@ -42,7 +43,7 @@ The final step sees the data summarized by the average (mean) for each of the su
  - 'feature_averages.txt' - final output file
 
 ### Table 1 - Modified Column Names
-The following are the 66 columns selected as part of the final tidy data requirement.
+The following are the 66 columns selected as part of the final tidy data requirement complete with there modified variable names.
 
 
  - time_AccJerk.mean_Z

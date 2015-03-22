@@ -36,7 +36,6 @@ run_analysis <- function(){
         activity <- rbind(actTestData, actTrainData)
         results <- rbind(testData, trainData)
 # 3. Uses descriptive activity names to name the activities in the data set
-<<<<<<< HEAD
         # Call to inner_join, effectively using actlabel as lookup and applying to activity list 
         namedAct <- inner_join(activity, actlabel, by="V1")
         #       Clean and add column hearders
@@ -59,32 +58,6 @@ run_analysis <- function(){
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
         feature_averages_table <- subset_data_frame %>% 
                 group_by(activity, subject) %>%
-                summarise_each(funs(mean), 3:ncol(subset_data_frame)) 
+                summarise_each(funs(mean), 3:ncol(subset_data_frame))
         write.table(feature_averages_table, "feature_averages.txt", sep=" " ,row.name=FALSE, eol="\r\n")
 }
-
-
-
-
-
-=======
-# Call to inner_join, effectively using actlabel as lookup and applying to activity list 
-        namedAct <- inner_join(activity, actlabel, by="V1")
-#       Clean and add column hearders
-# 4. Appropriately labels the data set with descriptive variable names. 
-        featureNames <- make.unique(make.names(as.character(features$V2)))
-        colnames(results) <- featureNames
-        mergeData <- cbind(namedAct$V2, subject, results)
-        colnames(mergeData)[1] <- "activity"
-        colnames(mergeData)[2] <- "subject"
-# 2. Extracts only the measurements on the mean and standard deviation for each measurement.
-        measurementData <- tbl_df(mergeData)
-        measurementData %>% 
-                select(activity, subject, contains("mean", ignore.case=FALSE), contains("std", ignore.case=FALSE), -contains("meanFreq"))
-# 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-        tidyTbl <- measurementData %>% 
-        group_by(activity, subject) %>%
-        summarise_each(funs(mean), 3:563) %>%
-        print
-}
->>>>>>> origin/master

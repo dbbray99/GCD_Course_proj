@@ -1,5 +1,5 @@
 # Getting and Cleaning Data Course Project
-## Code Book for function run_analysis() used for this course project.
+## Code Book for function run_analysis() and resultant data set.
 
 ### Assumptions
 The README.md file describes the methodology used to perform the data analysis and cleaning.

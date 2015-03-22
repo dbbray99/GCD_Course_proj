@@ -21,10 +21,10 @@ The function run_analysis() downloads the zip file from the provided URL locatio
 
 Once all files have been loaded, rbind is used to combine the data into three areas, subject, activity and results. Appropriate activity names are merged and a series of actions are performed to create more meaningful column names before all data sets are combined. 
 
-A data subset is created for columns releated to mean and standard deviation. This reduces to the number of columns from the originla 561 to 66, two additonal columns for activity and subject are created making a final data set with 68 columns.
+A data subset is created for columns releated to mean and standard deviation. This reduces to the number of columns from the original 561 down to 66, two additonal columns for activity and subject are created making a final data set with 68 columns.
 
-The final step sees the data summarized by the average (mean) for each of the subset columns by "activity" and "subject". This creates an output file where each row represets an activity (6) for each subject (30) across the selected feature columns (mean and std).
+The final step sees the data summarized by the average (mean) for each of the subset columns by "activity" and "subject". This creates an output file where each row represets an activity (6) for each subject (30) across the selected "feature" columns (mean and std).
 
 ## Data Dictionary
-A details that describes the variables, the data, and the transformations used to clean up the data is provided in the file CodeBook.md.
+Information that describes the variables, the data, and the transformations used to clean up the data is provided in the file CodeBook.md.
 

@@ -15,7 +15,7 @@ Descriptions of the original data are provided in the following files;
  - features_info.txt: Shows information about the variables used on the feature vector.
  - README.txt: The original overall description file for the core data.  
 
-It's is highly recommended that you familiorize yourself with this information before proceeding
+It is highly recommended that you familiorize yourself with this information before proceeding
 
 The function run_analysis() downloads the zip file from the provided URL location and extracts the data into the current working directory. Files are extracted and loaded into a series of data frames and prepared for combining into a single data set. (Note I chose not do load and merge the inertia signal data sets for both train and test as this data is ultimatly removed in later steps anyway).
 

@@ -16,7 +16,9 @@ The documents provided with the original data set should be used to describe the
  - 'actlabel' - stores the activity to code mapping  
  - 'combined_data' - stores the final combined data set comprising the "subject", "activity" and "results" data sets  
  - 'all_data_frame' -  Table created based on combined data sets for the purpose of final data summarization  
- - 'subset_data_frame' - uses "all_data_frame" for the creation of the subset data based on "mean" and "standard deviation" variables only. See table 1 below for the selected fields and modified variable names. 
+ - 'subset_data_frame' - uses "all_data_frame" for the creation of the subset data based on "mean" and "standard deviation" variables only. 
+
+See table 1 below for the selected fields and modified variable names. 
 
 ### Preliminary Combined Data
  - 'subject' - stores the combined subject test and train data sets

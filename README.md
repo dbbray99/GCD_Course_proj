@@ -10,21 +10,22 @@ As per the course directive the R script called run_analysis.R does the followin
 
 ## Methodology
 Descriptions of the original data are provided in the following files;
- - activity_labels.txt: provides a lisitng of the 6 activities the test subjects were asked to perform and links the class labels with their activity name.
+ - activity_labels.txt: provides a listing of the 6 activities the test subjects were asked to perform and links the class labels with their activity name.
  - features.txt: provides a list of the original list of features tested.
  - features_info.txt: Shows information about the variables used on the feature vector.
  - README.txt: The original overall description file for the core data.  
 
-It is highly recommended that you familiorize yourself with this information before proceeding
+It is highly recommended that you familiarize yourself with this information before proceeding
 
-The function run_analysis() downloads the zip file from the provided URL location and extracts the data into the current working directory. Files are extracted and loaded into a series of data frames and prepared for combining into a single data set. (Note I chose not do load and merge the inertia signal data sets for both train and test as this data is ultimatly removed in later steps anyway).
+The function run_analysis() downloads the zip file from the provided URL location and extracts the data into the current working directory. Files are extracted and loaded into a series of data frames and prepared for combining into a single data set. (Note I chose not do load and merge the inertia signal data sets for both train and test as this data is ultimately removed in later steps anyway).
 
 Once all files have been loaded, rbind is used to combine the data into three areas, subject, activity and results. Appropriate activity names are merged and a series of actions are performed to create more meaningful column names before all data sets are combined. 
 
-A data subset is created for columns releated to mean and standard deviation. This reduces to the number of columns from the original 561 down to 66, two additonal columns for activity and subject are created making a final data set with 68 columns.
+A data subset is created for columns related to mean and standard deviation. This reduces to the number of columns from the original 561 down to 66, two additional columns for activity and subject are created making a final data set with 68 columns.
 
-The final step sees the data summarized by the average (mean) for each of the subset columns by "activity" and "subject". This creates an output file where each row represets an activity (6) for each subject (30) across the selected "feature" columns (mean and std).
+The final step sees the data summarized by the average (mean) for each of the subset columns by "activity" and "subject". This creates an output file where each row represents an activity (6) for each subject (30) across the selected "feature" columns (mean and std).
 
 ## Data Dictionary
 Information that describes the variables, the data, and the transformations used to clean up the data is provided in the file CodeBook.md.
+
 
